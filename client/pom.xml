@@ -4,7 +4,7 @@
 	<groupId>me.yumin.java</groupId>
 	<artifactId>koubei-sharding-client</artifactId>
 	<version>1.0.5-SNAPSHOT</version>
-	<description>Implement DB sharding with ibatis</description>
+	<description>Implement DB sharding with iBatis</description>
 	<dependencies>
 		<dependency>
 			<groupId>commons-dbcp</groupId>
