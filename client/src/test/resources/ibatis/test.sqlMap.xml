@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Test">
+
+	<typeAlias alias="POJO" type="com.koubei.sharding.client.test.POJO" />
+	<resultMap class="POJO" id="pojo">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="created" column="created" />
+		<result property="modified" column="modified" />
+	</resultMap>
+
+	<!-- CUD By POJO -->
+	<insert id="insertByPOJO" parameterClass="java.util.HashMap">
+		<![CDATA[
+			INSERT INTO $main$ (id, name, created, modified) VALUE (#id#, #name#, #created#, #modified#);
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $main$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+	<update id="updateByPOJO" parameterClass="java.util.HashMap">
+		<![CDATA[
+			UPDATE $main$ SET name=#name#,created=#created#,modified=#modified# WHERE id=#id#;
+		]]>
+	</update>
+	<delete id="deleteByPOJO" parameterClass="java.util.HashMap">
+		<![CDATA[
+			DELETE FROM $main$ WHERE id=#id#;
+		]]>
+	</delete>
+
+	<!-- CUD By Map -->
+	<insert id="insertByMap" parameterClass="java.util.HashMap">
+		<![CDATA[
+			INSERT INTO $main$ (id, name, created, modified) VALUE (#id#, #name#, #created#, #modified#);
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $main$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+	<update id="updateByMap" parameterClass="java.util.HashMap">
+		<![CDATA[
+			UPDATE $main$ SET name=#name#,created=#created#,modified=#modified# WHERE id=#id#;
+		]]>
+	</update>
+	<delete id="deleteByMap" parameterClass="java.util.HashMap">
+		<![CDATA[
+			DELETE FROM $main$ WHERE id=#id#;
+		]]>
+	</delete>
+
+	<!-- CUD By String -->
+	<insert id="insertByString" parameterClass="java.util.HashMap">
+		<![CDATA[
+			INSERT INTO $main$ (id, name, created, modified) VALUE (#id#, "insertByString", UNIX_TIMESTAMP(), UNIX_TIMESTAMP());
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $main$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+	<update id="updateByString" parameterClass="java.util.HashMap">
+		<![CDATA[
+			UPDATE $main$ SET name="updateByString",created=UNIX_TIMESTAMP(),modified=UNIX_TIMESTAMP() WHERE id=#id#;
+		]]>
+	</update>
+	<delete id="deleteByString" parameterClass="java.util.HashMap">
+		<![CDATA[
+			DELETE FROM $main$ WHERE id=#id#;
+		]]>
+	</delete>
+
+	<!-- CUD By Integer -->
+	<insert id="insertByInteger" parameterClass="java.util.HashMap">
+		<![CDATA[
+			INSERT INTO $main$ (id, name, created, modified) VALUE (#id#, "insertByInteger", #created#, UNIX_TIMESTAMP());
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $main$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+	<update id="updateByInteger" parameterClass="java.util.HashMap">
+		<![CDATA[
+			UPDATE $main$ SET name="updateByInteger",created=#created#,modified=UNIX_TIMESTAMP() WHERE id=#id#;
+		]]>
+	</update>
+	<delete id="deleteByInteger" parameterClass="java.util.HashMap">
+		<![CDATA[
+			DELETE FROM $main$ WHERE id=#id# AND created=#created#;
+		]]>
+	</delete>
+
+	<!-- Select -->
+	<select id="selectByPOJOResultPOJO" parameterClass="java.util.HashMap" resultMap="pojo">
+		<![CDATA[
+			SELECT * FROM $main$ WHERE id=#id#;
+		]]>
+	</select>
+	<select id="selectByMapResultPOJO" parameterClass="java.util.HashMap" resultMap="pojo">
+		<![CDATA[
+			SELECT * FROM $main$ WHERE id=#id#;
+		]]>
+	</select>
+	<select id="selectByStringResultPOJO" parameterClass="java.util.HashMap" resultMap="pojo">
+		<![CDATA[
+			SELECT * FROM $main$ WHERE id=#id#;
+		]]>
+	</select>
+	<select id="selectByIntegerResultPOJO" parameterClass="java.util.HashMap" resultMap="pojo">
+		<![CDATA[
+			SELECT * FROM $main$ WHERE id=#id# AND created=#created#;
+		]]>
+	</select>
+
+	<!-- Execute -->
+	<insert id="executeInsert" parameterClass="java.util.HashMap">
+		<![CDATA[
+			$sql$
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $main$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+	<update id="executeUpdate" parameterClass="java.util.HashMap">
+		<![CDATA[
+			$sql$
+		]]>
+	</update>
+	<delete id="executeDelete" parameterClass="java.util.HashMap">
+		<![CDATA[
+			$sql$
+		]]>
+	</delete>
+
+</sqlMap>

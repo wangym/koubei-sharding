@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="dsnHuangye0" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store1.db.hz2.koubei.net:3306/huangye0?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye1" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store1.db.hz2.koubei.net:3306/huangye1?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye2" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store1.db.hz2.koubei.net:3306/huangye2?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye3" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store1.db.hz2.koubei.net:3306/huangye3?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye4" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store2.db.hz2.koubei.net:3306/huangye4?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye5" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store2.db.hz2.koubei.net:3306/huangye5?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye6" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store2.db.hz2.koubei.net:3306/huangye6?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye7" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store3.db.hz2.koubei.net:3306/huangye7?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye8" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store3.db.hz2.koubei.net:3306/huangye8?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+	<bean id="dsnHuangye9" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://store3.db.hz2.koubei.net:3306/huangye9?characterEncoding=utf-8</value>
+		</property>
+		<property name="username">
+			<value>test</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+	</bean>
+
+</beans>

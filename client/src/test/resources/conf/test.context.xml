@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="testDataSourceMap" class="java.util.TreeMap">
+		<constructor-arg>
+			<map>
+				<entry key="shard0" value-ref="testDataSource0" />
+				<entry key="shard1" value-ref="testDataSource1" />
+				<entry key="shard2" value-ref="testDataSource2" />
+				<entry key="shard3" value-ref="testDataSource3" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="testShardingStrategy" class="com.koubei.sharding.client.impl.DefaultShardingStrategy">
+		<!-- ibatis框架所需的sqlMapConfig文件,必选 -->
+		<property name="configLocation" value="ibatis/test.sqlMapConfig.xml" />
+		<!-- 数据源(key建议取为库名,不能重复),必选-->
+		<property name="dataSourceMap" ref="testDataSourceMap" />
+	</bean>
+
+	<bean id="testShardingPlugin" class="com.koubei.sharding.client.test.Plugin" />
+
+	<bean id="dao" class="com.koubei.sharding.client.test.DAO">
+		<property name="shardingPlugin" ref="testShardingPlugin" /> <!-- 可选 -->
+		<property name="shardingStrategy" ref="testShardingStrategy" /> <!-- 必选 -->
+	</bean>
+
+</beans>

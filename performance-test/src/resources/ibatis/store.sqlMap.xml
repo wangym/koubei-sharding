@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="SQL">
+
+	<typeAlias alias="Store" type="entity.Store" />
+	<resultMap class="Store" id="store">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="subname" column="subname" />
+		<result property="userId" column="user_id" />
+		<result property="mainCate" column="main_cate" />
+		<result property="secCate" column="sec_cate" />
+		<result property="city" column="city" />
+		<result property="district" column="district" />
+		<result property="address" column="address" />
+		<result property="createTime" column="c_time" />
+		<result property="modifyTime" column="m_time" />
+		<result property="isowner" column="is_owner" />
+		<result property="url" column="url" />
+		<result property="introduce" column="introduce" />
+		<result property="status" column="status" />
+		<result property="isopen" column="is_open" />
+		<result property="firstAppraisementUserId" column="frt_app_user" />
+		<result property="operatorFlag" column="op_flag" />
+		<result property="storeType" column="store_type" />
+		<result property="domain" column="domain" />
+		<result property="posx" column="posx" />
+		<result property="posy" column="posy" />
+		<result property="phoneCheck" column="phone_c" />
+		<result property="phoneChkTime" column="phone_ct" />
+		<result property="chkUser" column="chk_user" />
+		<result property="chkTime" column="chk_time" />
+		<result property="propertyPlus" column="property_plus" />
+	</resultMap>
+
+	<insert id="insertStore" parameterClass="java.util.HashMap">
+		<![CDATA[
+			INSERT INTO $store$ (id, name, subname, user_id, main_cate, sec_cate, city, district, address, c_time, m_time, is_owner, url, introduce, status, is_open, frt_app_user, op_flag, store_type, domain, posx, posy, phone_c, phone_ct, chk_user, chk_time, property_plus) 
+			VALUE (#id#, #name#, #subname#, #userId#, #mainCate#, #secCate#, #city#, #district#, #address#, now(), now(), #isowner#, #url#, #introduce#, #status#, #isopen#, #firstAppraisementUserId#, #operatorFlag#, #storeType#, #domain#, #posx#, #posy#, #phoneCheck#, now(), #chkUser#, now(), #propertyPlus#);
+		]]>
+		<selectKey keyProperty="id" resultClass="java.lang.String">
+			SELECT id FROM $store$ WHERE id=#id#;
+		</selectKey>
+	</insert>
+
+	<select id="selectStore" parameterClass="java.util.HashMap"
+		resultMap="store">
+		<![CDATA[
+			SELECT * FROM $store$ WHERE id=#id#;
+		]]>
+	</select>
+
+</sqlMap>

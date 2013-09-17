@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<import resource="classpath:conf/huangye.datasource.xml" />
+
+	<bean id="dataSourceMap" class="java.util.TreeMap">
+		<constructor-arg>
+			<map>
+				<entry key="huangye0" value-ref="dsnHuangye0" />
+				<entry key="huangye1" value-ref="dsnHuangye1" />
+				<entry key="huangye2" value-ref="dsnHuangye2" />
+				<entry key="huangye3" value-ref="dsnHuangye3" />
+				<entry key="huangye4" value-ref="dsnHuangye4" />
+				<entry key="huangye5" value-ref="dsnHuangye5" />
+				<entry key="huangye6" value-ref="dsnHuangye6" />
+				<entry key="huangye7" value-ref="dsnHuangye7" />
+				<entry key="huangye8" value-ref="dsnHuangye8" />
+				<entry key="huangye9" value-ref="dsnHuangye9" />
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="defaultShardingStrategy" class="com.koubei.sharding.client.impl.DefaultShardingStrategy">
+		<property name="configLocation" value="ibatis/huangye.sqlMapConfig.xml" />
+		<property name="dataSourceMap" ref="dataSourceMap" />
+	</bean>
+	<bean id="dao" class="com.koubei.sharding.tool.huangye.DAO">
+		<property name="shardingStrategy" ref="defaultShardingStrategy" />
+	</bean>
+
+</beans>
