@@ -1,4 +1,5 @@
 language: java
 jdk:
   - openjdk6
+before_script: cd client
 script: mvn install -DskipTests=true
