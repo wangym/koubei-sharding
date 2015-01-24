@@ -1,5 +1,5 @@
 language: java
 jdk:
   - openjdk6
-before_script: cd client
+before_script: cd koubei-sharding-client
 script: mvn install -DskipTests=true
