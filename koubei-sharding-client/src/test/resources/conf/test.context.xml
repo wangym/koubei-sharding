@@ -13,16 +13,16 @@
 		</constructor-arg>
 	</bean>
 
-	<bean id="testShardingStrategy" class="com.koubei.sharding.client.impl.DefaultShardingStrategy">
+	<bean id="testShardingStrategy" class="me.yumin.sharding.client.impl.DefaultShardingStrategy">
 		<!-- ibatis框架所需的sqlMapConfig文件,必选 -->
 		<property name="configLocation" value="ibatis/test.sqlMapConfig.xml" />
 		<!-- 数据源(key建议取为库名,不能重复),必选-->
 		<property name="dataSourceMap" ref="testDataSourceMap" />
 	</bean>
 
-	<bean id="testShardingPlugin" class="com.koubei.sharding.client.test.Plugin" />
+	<bean id="testShardingPlugin" class="me.yumin.sharding.client.Plugin" />
 
-	<bean id="dao" class="com.koubei.sharding.client.test.DAO">
+	<bean id="dao" class="me.yumin.sharding.client.DAO">
 		<property name="shardingPlugin" ref="testShardingPlugin" /> <!-- 可选 -->
 		<property name="shardingStrategy" ref="testShardingStrategy" /> <!-- 必选 -->
 	</bean>

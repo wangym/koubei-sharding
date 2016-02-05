@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.exception;
+package me.yumin.sharding.client.exception;
 
 /**
  * @author xuanyin

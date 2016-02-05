@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.koubei.sharding.client.test;
+package me.yumin.sharding.client;
 
 import java.util.Map;
-import com.koubei.sharding.client.IShardingPlugin;
+import me.yumin.sharding.client.IShardingPlugin;
 
 /**
  * @author xuanyin

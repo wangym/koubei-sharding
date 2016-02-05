@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.impl;
+package me.yumin.sharding.client.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +10,11 @@ import java.util.concurrent.Executors;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import com.ibatis.sqlmap.client.SqlMapClient;
-import com.koubei.sharding.client.IShardingDAO;
-import com.koubei.sharding.client.IShardingPlugin;
-import com.koubei.sharding.client.IShardingStrategy;
-import com.koubei.sharding.client.etc.ShardingConfig;
-import com.koubei.sharding.client.etc.ShardingUtil;
+import me.yumin.sharding.client.IShardingDAO;
+import me.yumin.sharding.client.IShardingPlugin;
+import me.yumin.sharding.client.IShardingStrategy;
+import me.yumin.sharding.client.etc.ShardingConfig;
+import me.yumin.sharding.client.etc.ShardingUtil;
 
 /**
  * @author xuanyin

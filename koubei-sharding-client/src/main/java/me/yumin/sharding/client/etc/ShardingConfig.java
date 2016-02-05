@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.etc;
+package me.yumin.sharding.client.etc;
 
 import java.util.ResourceBundle;
 import org.apache.commons.logging.Log;

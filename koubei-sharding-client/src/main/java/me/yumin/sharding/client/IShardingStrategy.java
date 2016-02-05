@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client;
+package me.yumin.sharding.client;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 

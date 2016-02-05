@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.koubei.sharding.client.test;
+package me.yumin.sharding.client;
 
-import com.koubei.sharding.client.etc.ShardingUtil;
+import me.yumin.sharding.client.etc.ShardingUtil;
 
 /**
  * 

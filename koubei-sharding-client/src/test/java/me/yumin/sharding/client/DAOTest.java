@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.test;
+package me.yumin.sharding.client;
 
 import java.util.Date;
 import java.util.HashMap;

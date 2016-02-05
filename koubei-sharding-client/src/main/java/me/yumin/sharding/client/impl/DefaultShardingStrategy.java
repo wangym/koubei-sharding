@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.impl;
+package me.yumin.sharding.client.impl;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -13,10 +13,10 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.orm.ibatis.SqlMapClientFactoryBean;
 import com.ibatis.sqlmap.client.SqlMapClient;
-import com.koubei.sharding.client.IShardingStrategy;
-import com.koubei.sharding.client.etc.ShardingConfig;
-import com.koubei.sharding.client.etc.ShardingUtil;
-import com.koubei.sharding.client.exception.ShardingException;
+import me.yumin.sharding.client.IShardingStrategy;
+import me.yumin.sharding.client.etc.ShardingConfig;
+import me.yumin.sharding.client.etc.ShardingUtil;
+import me.yumin.sharding.client.exception.ShardingException;
 
 /**
  * @author xuanyin

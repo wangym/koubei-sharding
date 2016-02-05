@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.client.test;
+package me.yumin.sharding.client;
 
 /**
  * @author xuanyin

@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.koubei.sharding.client.test;
+package me.yumin.sharding.client;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.koubei.sharding.client.etc.ShardingConfig;
-import com.koubei.sharding.client.etc.ShardingUtil;
-import com.koubei.sharding.client.impl.BaseShardingDAO;
+import me.yumin.sharding.client.etc.ShardingConfig;
+import me.yumin.sharding.client.etc.ShardingUtil;
+import me.yumin.sharding.client.impl.BaseShardingDAO;
 
 /**
  * @author xuanyin
