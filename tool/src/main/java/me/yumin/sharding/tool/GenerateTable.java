@@ -1,7 +1,7 @@
 /**
  * 批量生成建表SQL
  */
-package com.koubei.sharding.tool;
+package me.yumin.sharding.tool;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

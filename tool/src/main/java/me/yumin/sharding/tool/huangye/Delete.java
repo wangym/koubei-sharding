@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.tool.huangye;
+package me.yumin.sharding.tool.huangye;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,8 +9,8 @@ import java.io.FileReader;
 import java.util.Date;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.koubei.sharding.tool.common.Constant;
-import com.koubei.sharding.tool.common.Util;
+import me.yumin.sharding.tool.common.Constant;
+import me.yumin.sharding.tool.common.Util;
 
 /**
  * @author xuanyin

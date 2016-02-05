@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.tool.common;
+package me.yumin.sharding.tool.common;
 
 import java.io.BufferedWriter;
 import java.io.File;

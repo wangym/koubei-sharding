@@ -4,7 +4,7 @@
 package base;
 
 import java.util.HashMap;
-import com.koubei.sharding.client.impl.BaseShardingDAO;
+import me.yumin.sharding.client.impl.BaseShardingDAO;
 import entity.Store;
 
 /**

@@ -6,7 +6,7 @@ package test;
 
 import base.Model;
 import base.Util;
-import com.koubei.sharding.client.etc.ShardingUtil;
+import me.yumin.sharding.client.etc.ShardingUtil;
 
 /**
  * @author xuanyin

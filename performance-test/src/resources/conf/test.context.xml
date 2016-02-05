@@ -13,7 +13,7 @@
 		</constructor-arg>
 	</bean>
 
-	<bean id="shardingStrategy" class="com.koubei.sharding.client.impl.DefaultShardingStrategy">
+	<bean id="shardingStrategy" class="me.yumin.sharding.client.impl.DefaultShardingStrategy">
 		<property name="configLocation" value="ibatis/test.sqlMapConfig.xml" />
 		<property name="dataSourceMap" ref="dataSourceMap" />
 	</bean>

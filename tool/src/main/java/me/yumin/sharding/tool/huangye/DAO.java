@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.koubei.sharding.tool.huangye;
+package me.yumin.sharding.tool.huangye;
 
 import java.util.HashMap;
-import com.koubei.sharding.client.impl.BaseShardingDAO;
+import me.yumin.sharding.client.impl.BaseShardingDAO;
 
 /**
  * @author xuanyin

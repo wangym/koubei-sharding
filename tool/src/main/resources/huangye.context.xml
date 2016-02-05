@@ -20,11 +20,11 @@
 			</map>
 		</constructor-arg>
 	</bean>
-	<bean id="defaultShardingStrategy" class="com.koubei.sharding.client.impl.DefaultShardingStrategy">
+	<bean id="defaultShardingStrategy" class="me.yumin.sharding.client.impl.DefaultShardingStrategy">
 		<property name="configLocation" value="ibatis/huangye.sqlMapConfig.xml" />
 		<property name="dataSourceMap" ref="dataSourceMap" />
 	</bean>
-	<bean id="dao" class="com.koubei.sharding.tool.huangye.DAO">
+	<bean id="dao" class="me.yumin.sharding.tool.huangye.DAO">
 		<property name="shardingStrategy" ref="defaultShardingStrategy" />
 	</bean>
 

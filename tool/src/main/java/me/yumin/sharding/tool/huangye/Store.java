@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.koubei.sharding.tool.huangye;
+package me.yumin.sharding.tool.huangye;
 
 import java.io.Serializable;
 import java.util.Date;
