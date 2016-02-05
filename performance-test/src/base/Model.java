@@ -28,14 +28,14 @@ public class Model {
 		store.setDistrict(2700);
 		store.setAddress("竞舟路98号(文三西路口)");
 		store.setIsowner(1);
-		store.setUrl("http://hangzhou.koubei.com/store/detail--storeId-fb8d203d52ec40b5a6ef7f461c67b5b3");
+		store.setUrl("http://hangzhou.koubei/store/detail--storeId-fb8d203d52ec40b5a6ef7f461c67b5b3");
 		store.setIntroduce("缘一锅羊蝎子,取材于内蒙古大草原的绵羊,属鸀色食品,又是滋补药膳。它春可清内热、夏可消暑、秋能聚敛、冬行温补之效,堪称老少皆宜,四季皆享的上乘美容健脑的佳肴。");
 		store.setStatus(99);
 		store.setIsopen(1);
 		store.setFirstAppraisementUserId(1234567890);
 		store.setOperatorFlag(1);
 		store.setStoreType(1);
-		store.setDomain("http://dian.koubei.com/fb8d203d52ec40b5a6ef7f461c67b5b3");
+		store.setDomain("http://dian.koubei/fb8d203d52ec40b5a6ef7f461c67b5b3");
 		store.setPosx(11111);
 		store.setPosy(222222);
 		store.setPhoneCheck(1);
